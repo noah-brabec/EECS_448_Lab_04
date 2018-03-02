@@ -25,7 +25,7 @@
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Dorms for Sale!</h1>
-          <p class="lead text-muted">Are you looking for a dorm? Well look no farther! We here at Dave's Discount Dorms have got all of your dorm needs covered. We have a WIDE (3 options) selection to choose from. Take a look below!</p>
+          <p class="lead text-muted">Are you looking for a dorm? Well look no further! We here at Dave's Discount Dorms have got all of your dorm needs covered. We have a WIDE (3 options) selection to choose from. Take a look below!</p>
         </div>
       </section>
       <div class="album py-5 bg-light">
@@ -38,7 +38,7 @@
                 <img class="card-img-top" src="resources/ellsworth2.jpg" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">Our base product and what carried us to the corporate conglomerate we are today. Simple and reliable for only $823/lb. We promise it won't let you down.</p>
-                  <p class="card-text">How many Pounds:<input type="text" id="ellsAmount" value="0"> lbs</p>
+                  <p class="card-text">How many Pounds:<input type="text" name="ellsAmount" id="ellsAmount" value="<0>"> lbs</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <a href="https://housing.ku.edu/residence-halls/ellsworth" class="btn btn-default">View</a>
@@ -53,7 +53,7 @@
                 <img class="card-img-top" src="resources/gsp_front_1.jpg" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">The middle ground between basic and premium, our "Plus" option gives you a dissapointingly similar experience to the basic option for a comically large upcharge. Only $2000/lb.</p>
-                  <p class="card-text">How many Pounds:<input type="text" id="GSPAmount" value="0"> lbs</p>
+                  <p class="card-text">How many Pounds:<input type="text" name="GSPAmount" id="GSPAmount" value="<0>"> lbs</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <a href="https://housing.ku.edu/residence-halls/gsp" class="btn btn-default">View</a>
@@ -68,7 +68,7 @@
                 <img class="card-img-top" src="resources/alisar.jpg" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">Our "Premium" option. Downs Hall is on the forfront of all dorm technology. Every pound of this dorm has been carelessly triple inspected and is garunteed to give you the placebo of working better just because you paid more. Only $8534/lb.</p>
-                  <p class="card-text">How many Pounds:<input type="text" id="downsAmount" value="0"> lbs</p>
+                  <p class="card-text">How many Pounds:<input type="text" name="downsAmount" id="downsAmount" value="<0>"> lbs</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <a href="http://housing.ku.edu/downs" class="btn btn-default">View</a>
@@ -82,9 +82,16 @@
       </div>
       <section class="jumbotron text-center">
         <div class="container">
-          <p class="lead text-muted">Username:<input type="text" id="username" value="<you@domain.extension>"> </p>
-          <p class="lead text-muted">Password:<input type="text" id="password" value="<your password>"> </p>
-          <button type="submit">Submit</button>
+          <p class="lead text-muted">Choose your shipping method!</p><br>
+          <input type="radio" id="shipping" name="shipping" value="free">
+          <label for="free">Free 7-Day Shipping</label><br>
+          <input type="radio" id="shipping" name="shipping" value="nextDay">
+          <label for="nextDay">$50.00 Over-Night Shipping</label><br>
+          <input type="radio" id="shipping" name="shipping" value="threeDay">
+          <label for="threeDay">$5.00 3-Day Shipping</label><br>
+          <p class="lead text-muted">Username:<input type="text" name="username" id="username" value="<you@domain.extension>"> </p>
+          <p class="lead text-muted">Password:<input type="text" name="password" id="password" value="<your password>"> </p>
+          <button type="submit" onsubmit="verifyInputs()">Submit</button>
           <h1 class="jumbotron-heading">Your Order</h1>
         </div>
       </section>
